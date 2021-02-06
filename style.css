@@ -24,3 +24,12 @@ body {
     max-width:200px;
   }
 }
+
+.container
+{
+  margin-top:50px;
+  padding:20px;
+  border: black;
+  background-color: white;
+
+}
