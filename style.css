@@ -11,15 +11,16 @@ body {
 
 .responsive
 {
-  width:100%;
+  width:75%;
   height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
   .responsive
   {
-    width:100%;
-    height:auto;
     max-width:200px;
   }
 }
