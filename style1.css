@@ -85,7 +85,9 @@ body{
 /* When smaller screen, switch to hamburger mode */
 @media screen and (max-width: 768px) {
   .topnav a, .dropdown .dropbtn {
+    float:left;
     display: none;
+
   }
   .topnav a.icon {
     float: right;
@@ -98,16 +100,18 @@ body{
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 0px;
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
+  .topnav.responsive a:first-child {margin-top:50px;}
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
   .topnav.responsive .dropdown .dropbtn {
+    float:left;
     display: block;
     width: 100%;
     text-align: left;
