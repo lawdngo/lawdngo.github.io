@@ -3,6 +3,13 @@ body {
   background: grey;
 }
 
+.nav-pills .nav-link.active
+{
+  background-color:darkgray;
+  border-radius: 5px;
+
+}
+
 .navbar-brand
 {
   padding-top: 0;
@@ -11,7 +18,7 @@ body {
 
 .responsive
 {
-  width:75%;
+  width:85%;
   height:auto;
   display: block;
   margin-left: auto;
@@ -28,8 +35,18 @@ body {
 .container
 {
   margin-top:50px;
-  padding:20px;
+  padding:15px;
   border: black;
   background-color: white;
+}
 
+/*For container width when screen size reaches below 576px*/
+@media screen and (max-width: 576px)
+{
+  .container
+  {
+    max-width:90%;
+    margin-right:auto;
+    margin-left:auto;
+  }
 }
