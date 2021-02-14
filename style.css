@@ -45,7 +45,7 @@ body {
 
 .responsive
 {
-  width:85%;
+  width:75%;
   height:auto;
   display: block;
   margin-left: auto;
@@ -61,11 +61,16 @@ body {
 
 .container
 {
-  margin-top:50px;
+  margin-top:15px;
   padding:15px;
   border: black;
   background-color: white;
   border-radius:5px;
+}
+
+.container-first
+{
+  margin-top:50px;
 }
 
 /*For container width when screen size reaches below 576px*/
@@ -79,7 +84,7 @@ body {
   }
 }
 
-h1
+.name
 {
   font-size:32px;
 }
@@ -89,18 +94,18 @@ h2
   text-align:center;
 }
 
-h3
+.title
 {
   font-size:22px;
 }
 
 @media (min-width: 768px) {
   
-  h1
+  .name
   {
     font-size:50px;
   }
-  h3
+  .title
   {
     font-size:35px;
   }
