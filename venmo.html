@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Venmo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Needed for navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar nav-pills sticky-top navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="images/logo.svg" width=50px>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" aria-current="page" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Case Studies
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="tritonNews.html">Triton News Website</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="venmo.html">Venmo</a></li>
+                            <li><a class="dropdown-item" href="amtrak.html">Amtrak</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="remedy.html">Remedy Mobile Web App</a></li>
+                            <li><a class="dropdown-item" href="completer.html">Completer Mobile Web App</a></li>
+                            <li><a class="dropdown-item" href="mundoGardens.html">Global Ties: Mundo Gardens</a></li>
+                            <li><a class="dropdown-item" href="woodenDesk.html">Custom Wooden Desk</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container container-first">
+        <h2>Venmo</h2>
+        <div class="row align-items-center">
+        <div class="col-md-6 no-pad-right">
+            <img src="images/CaseStudies/Venmo/A1MeActivityList.PNG" class="responsive image-border" style="width:50%">
+        </div>
+        <div class="col-md-6 no-pad-left">
+            <img src="images/CaseStudies/Venmo/B1Transfer.PNG" class="responsive image-border" style="width:50%">
+        </div>
+        </div>
+    <p>
+        As a team of 4, we decided to look at redesigning <a href="https://www.venmo.com">Venmo</a>, an application used
+        by many individuals from teens to adults that provides a
+        convenient method of transferring money from one person to another. Venmo has grown to be a staple in almost
+        every person’s mobile phone, especially within a social
+        context. Typical use cases are for when a friend pays for you and you want to pay them back, or you are buying
+        an item or service from a seller off virtual marketplaces
+        like Craigslist and eBay.
+        <br></br>
+        ​To get some insight on the current issues of Venmo, we decided to test both experienced and inexperienced Venmo
+        users. Experienced Venmo users were mainly college students
+        because of the large amount of social interactions they partake in, whether it be eating out, buying items off
+        of each other, and hosting club fundraisers. We understand
+        that experienced users will have a preexisting bias for the understanding of Venmo, how it works, and their
+        preferences in terms of money transaction apps, but conducting
+        user tests on them will give us insight on issues that even experienced users may have. We also tested some
+        working adults and college students who have little experience
+        or never used Venmo before. Their limited experience will give us insight on the more basic user errors that
+        inexperienced users may have.​ We then conducted a competitive
+        analysis to see how other similar apps designed their apps. Afterwards, we created sketches of our redesigns and
+        made two working fusion prototypes.
+        <br></br>
+        This was a fun redesign because I personally use this app a great deal and have noticed some issues. For
+        example, the location of the friends list, and the whole purpose
+        of a public section. From this case study, I was able to improve my skills on conducting user testing and
+        condensing the data. Additionally, I improved on using
+        competitive analysis to see how other apps differ.
+    </p>
+    </div>
+
+    <div class="container">
+        <h3>Initial User Testing</h3>
+        <p>To redesign Venmo, we first needed to interview some users and observe their interaction with the app. We
+            chose to assess 4 users of differing degrees of Venmo usage and
+            tech knowledge.
+            <br></br>
+            Before having the users test the app, we needed to know their prior knowledge and experiences with
+            technology and, more specifically, Venmo. We asked them questions
+            and recorded their answers.
+        </p>
+        <p><strong>Interview Plan:</strong></p>
+        <ol>
+            <li>Do you use a smartphone? If so, how often do you use your smartphone?</li>
+            <li>How social are you in terms of interacting with friends, going out to eat, and such?</li>
+            <li>What do you think about money transferring apps in comparison to tangible currency?</li>
+            <li>Do you use any money transferring apps like Venmo, Zelle, and such? If so, how often do you use it and for what purpose?</li>
+            <li>Do you use a particular money transferring app and why do you use it compared to other ones?</li>
+        </ol>
+        <p>
+            To test each user, in order to focus on the different aspects of the app, we had them do 4 unique tasks. To observe the user, a tester gave one task at a time, 
+            constantly reminding them to speak out their thoughts and process, and a recorder recorded their words and action onto a 
+            <a src="https://drive.google.com/file/d/19rio8SWiRbQsqq9aRO_NrspP_-nN853E/view">document</a>.
+        </p>
+        <p><strong>​Tasks: (for each task, the user starts on the homepage)</strong></p>
+        <ol>
+            <li>Give your thoughts on the homepage, specifically the “Me”, “Friends”, and “Public” tabs.</li>
+            <li>Your friend, Bob Boberson (Venmo ID @BBoberson), bought your groceries because you forgot your wallet at home. It cost $0.01. Pay him back.</li>
+            <li>You feel like you’ll hang out with Bob more in the future so you want to add him as a friend. Try to find him again, add him as a friend, and look at his profile.</li>
+            <li>You want to know who is on your Venmo friend-list. Try to find the list and view it.</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <h3>2. Initial User Testing Analysis</h3>
+        <p>
+            With the user testing results recorded, we organized the information further by briefly summarizing what went right and wrong with each user. In addition, 
+            we labelled each users' top 3 usability errors according to <a src="https://www.nngroup.com/articles/ten-usability-heuristics">Jakob Nielson's 10 Usability Heuristics</a>.
+        </p>
+        <p>
+            <strong>User 1: Jeudi (Middle-aged adult, little Venmo experience, iOS)</strong>
+            <br />
+            <u>What worked:</u>
+            <br />
+            Although she had a lot of trouble completing the tasks, she was still able to complete them successfully. For task 1, she explained her dislike of the “public” tab, 
+            how she likes the gist of the homepage, and expressed an understanding of the iconography. For task 2, after searching for Bob, she was able to fulfill the rest of 
+            the process of paying. For task 3, after searching for Bob, she was able to see his profile and also add him as a friend. Lastly, for task 4, she was able to find a 
+            list of her friends.
+            <br></br>
+            <u>What didn't worked:</u>
+            <br />
+            While completing her tasks, she had a lot of trouble traversing and finding important aspects of the app. For task 1, she was mainly confused about iconography, but 
+            eventually learned what each icon meant. For task 2, she had a hard time finding Bob without the use of the user tag through the “search people” page. When she tried 
+            to pay him without a message, she was prompted to put a message. For task 3, she had a hard time remembering how to add Bob as a friend. She went through the 
+            “pay/request” page first, then to her profile, then to the homepage where she searched through the “me, friends, and public” tabs. She eventually searched Bob, 
+            looked at his profile, and saw the prompt to add him. Lastly, for task 4, she first looked at the “friends” tab, but then found the friends list under the 
+            “search people” page.
+            <br></br>
+            <u>Top 3 Usability Errors:</u>
+            <ul>
+                <li>Hard time searching for relevant users using limited resources. (Flexibility and Efficiency of Use)</li>
+                <li>Logical location of items, such as friends list, profile. (Match Between System and Real World or Recognition Rather than Recall)</li>
+                <li>Iconography is not intuitive. (Match Between System and Real World)</li>
+            </ul>
+        </p>
+
+        <p>
+            <strong>User 2: Cindy (College student, large Venmo experience, iOS)</strong>
+            <br />
+            <u>What worked:</u>
+            <br />
+            Since she has a lot of experience of using Venmo, she completed all the tasks successfully. In task 1, she said that she likes Venmo’s blue and white color theme, and 
+            in general, the design of the homepage is clean and simple. In task 2, after searching for the full Venmo ID of Bob, she easily “paid” Bob the correct amount of money. 
+            In task 3, she correctly found Bob by searching the full Venmo ID and then “added” him as a friend. In task 4, she correctly clicked on the “searching people” tab to 
+            pull out her friends’ list.
+            <br></br>
+            <u>What didn't worked:</u>
+            <br />
+            In task 1, she said that she thinks the public function is unnecessary since she has no need to know how other people spend their money. Moreover, she thought that 
+            the homepage could switch with the side menu, since most of the time she uses Venmo to send money to, or request money from others. But now these functions are 
+            “hiding” in the side menu instead of directly appearing on the homepage. In task 2, she first searched by Bob’s name, but there are a lot of people with the same 
+            name and she was unable to find out which Bob she was looking for. In task 3, she asked for the QR code of Bob since she is used to scanning the QR code to add others 
+            as friends. Task 4 worked well, but she still said that she was confused at the beginning about how to find the friends’ list.
+            <br></br>
+            <u>Top 3 Usability Errors:</u>
+            <ul>
+                <li>Cannot find the specific person only based on the name. (Flexibility and Efficiency of Use)</li>
+                <li>The friend list is in the “searching people” tag. (Match Between Systems and the Real World)</li>
+                <li>The homepage includes little or almost no useful information. (Aesthetic and​ Minimalist Design)</li>
+            </ul>
+        </p>
+
+        <p>
+            <strong>User 3: Kevin (College student, large Venmo experience, iOS)</strong>
+            <br />
+            <u>What worked:</u>
+            <br />
+            Kevin seemed to have a general idea of how Venmo works because he’s been using it for almost 4 years now. For task 1, he found the commenting system to be quite 
+            entertaining as he gets to see the banter between his friends and had no comment about the private feed other than that he can see his history. Because he was a 
+            mutual friend of mine, Kevin had no trouble finding Bob’s profile through a unique method. He ended up going into his own feed to find a mutual friend that paid 
+            Bob back to find his profile to pay him back. For task 3, to find Bob in a more simple manner, he found him through the search function where Bob ended up in the 
+            list of “top people.” In task 4, he was eventually able to find his list of friends after 3 minutes of searching.
+            <br></br>
+            <u>What didn't worked:</u>
+            <br />
+            Through most of the tasks, Kevin didn’t seem to understand some functions. One of the key problems he had was the utility of the “Public” feed. He thought that it was 
+            pointless because it only shows him people that he’s never met before and thought it would be better off without it. He also didn’t see a difference between “searching” 
+            and “paying” people as the results were the same. There wasn’t a reason to search for a person because you would only search for someone to request or pay them. There 
+            weren't any problems with task 3. However, with task 4, Kevin ran into some trouble finding his friends list. While observing, I noticed that the layout of the Venmo 
+            app is different on iOS compared to Android. So finding a friend list on the iPhone was a little more difficult.
+            <br></br>
+            <u>Top 3 Usability Errors:</u>
+            <ul>
+                <li>Finding “Friends List” was difficult because it wasn’t located where he thought it would be. (Match Between System and Real World or Recognition Rather than 
+                    Recall)</li>
+                <li>Venmo on ios is different from Venmo on Android (Consistency and Standards)</li>
+                <li>Does not see the difference in searching for and paying someone (Flexibility and Efficiency of Use)</li>
+            </ul>
+        </p>
+
+        <p>
+            <strong>User 4: Alvin (Middle-aged adult, no Venmo experience, iOS)</strong>
+            <br />
+            <u>What worked:</u>
+            <br />
+            Alvin had no prior experience with Venmo and thought the pay/request icon was intuitive. There were no issues with understanding how to pay someone. He felt like 
+            the side navigation bar was easy to understand and consolidated information well.
+            <br></br>
+            <u>What didn't worked:</u>
+            <br />
+            Many icons on the homepage and pay/request screen confused Alvin. He did not recognize the earth icon, person, and two people icons immediately on the homepage and 
+            felt that he had to guess the meaning. He thought the public and friend tabs were useless and unrelated to his main goal, which is to transfer money personally and 
+            privately. He also did not know whether he could private his transactions and felt like it was violating his privacy. The option for private transactions was not 
+            obvious. Many smaller icons on the pay/request screen did not have universal meanings and Alvin mistakenly thought the “tag” feature was a “friending someone” feature.
+            <br></br>
+            Another issue was finding the person to pay for. Alvin thought he had to friend someone first in order to pay them. But finding the person to friend was a 
+            frustrating experience. He tried typing their name and no one showed up, so he thought he needed to scan their QR code first in order for that person to appear in 
+            the search function. He also had trouble finding the friend list and thought there was no friend list.
+            <br></br>
+            An overall issue that Alvin struggled with was searching for people even though Venmo provided two ways: through search people in navigation slide and the 
+            pay/request screen. He felt like it was not easily accessible and had to press around the app to find them. It was also different on Android vs Apple. Android 
+            had back buttons to go back but Apple UI only had the hamburger button so users forget where they are in the app.
+            <br></br>
+            <u>Top 3 Usability Errors:</u>
+            <ul>
+                <li>No search bar on the homepage to find people (Flexibility and Efficiency of Use) </li>
+                <li>Icons are confusing. They don’t have universal meaning. (Match Between System and Real World)</li>
+                <li>No back button on Apple UI so user forgot where they are and has to keep going​ back to the homepage (User Control and Freedom)</li>
+            </ul>
+        </p>
+        <p>
+            Based on user testing, we decided to redesign the homepage for several reasons. First, the homepage is the first screen that users interact with, which means it 
+            would give users the important first impression of this application. Second, during the usability test, we found that almost all the participants were somehow 
+            confused by the homepage. For example, some participants reported the iconography (public, friends, and private tabs, and the pay/request) were vague and they 
+            could not find out what these icons stood for at a glance. Moreover, users also reported that the function “public”, which shows random people’s transferring 
+            history is unnecessary and even hurts privacy security. Third, Venmo’s homepage for iOS and Android are different which also caused confusion. Therefore, to 
+            improve users’ experience while using Venmo, we decided to redesign the homepage to hold the central focal point of paying/requesting while being easy to navigate.
+        </p>
+ 
+        <img src="images/CaseStudies/Venmo/VenmoCritique.PNG" class="responsive image-border" style="width:50%">
+    </div>
+
+    <div class="container">
+        <h3>3. Competitive Analysis</h3>
+        <p>For insight on how we could redesign the component, we decided to look at how other sites solve a similar problem. In this case, we choose to see how PayPal, Zelle, 
+            and Cash App organized their homepages, since all these applications serve a similar function.</p>
+
+        <p><strong>Analysis 1: Paypal</strong></p>
+        <p>
+            <a src="https://paypal.com">PayPal</a> is another money transferring service that aims to make transactions efficient and convenient to use. Once opening the application, users are met with a 
+            homescreen using a card like format for information. The navigation bar is much easier to reach as it lays on the bottom of the screen for convenient accessibility. 
+            The navbar has 3 options including send, request, and more. This navbar holds the most importance as it contains the primary functionality of the app. All three 
+            options have an easy to understand iconography and are worded beneath the image. The send and request buttons are also colored in, indicating that it serves an 
+            important purpose whereas the “more” option leadsyou to other actions that are considered extra features. The top of the screen also holds three pieces of 
+            information including notifications, profile, and settings. There may not be much focus on this section based on the small size of the iconography. 
+            Unfortunately, the biggest component which is between the top and bottom navbars, is slightly confusing in terms of layout. There are three different 
+            categories which are your activity, make an impact, and get the most out of PayPal. All three of these sections are unevenly spaced and are haphazardly formatted, 
+            overall making it a little uneasy to view. After some usage, the home page does start to include your activities as well as your contacts. What we hope to take away 
+            from the PayPal homepage is the bottom navbar with its intentions and primary focus easy to understand and use.
+        </p>
+        <div class="row align-items-center">
+            <div class="col-md-6 no-pad-right">
+                <img src="images/CaseStudies/Venmo/VenmoComp1-1.png" class="responsive image-border" style="width:80%">
+            </div>
+            <div class="col-md-6 no-pad-left">
+                <img src="images/CaseStudies/Venmo/VenmoComp1-2.png" class="responsive image-border" style="width:80%">
+            </div>
+        </div>
+
+        <p><strong>Analysis 2: Zelle</strong></p>
+        <p>
+            <a src="https://zelle.com">Zelle</a> is another frequently used money transferring app cooperating with multiple major banks in the United States. Zelle has a 
+            relatively simple homepage that only contains “send”, “request” and “activity” buttons. 
+            <br></br>
+            By reducing the elements and functions on the homepage, Zelle avoids users’ usage confusion. Another advantage brought by Zelle’s simple homepage design is that 
+            all the fundamental functions of a money transfer application can be accomplished by one-click. As a money transferring application, users mainly expect to use 
+            Zelle to pay or to request money from other people. The second important expectation of the users may be to check their own transferring history. Zelle’s design 
+            displays all these three fundamental functions on the homepage, making the application very easy to be used by its users.
+            <br></br>
+            Moreover, Zelle directly uses simple words like “send” or “request” instead of representative iconography to indicate a particular function. This usage of words 
+            helps users figure out how to use Zelle at their first glance, decreasing the difficulties of discovering the proper way of using Zelle.
+            <br></br>
+            What we learned from analyzing Zelle’s design is to put nothing else but the most fundamental functions on the homepage of the application. By applying this idea 
+            to our redesign, we could make Venmo’s homepage less confusing and easier to use.​
+        </p>
+        <img src="images/CaseStudies/Venmo/VenmoComp2.png" class="responsive image-border" style="width:50%">
+
+        <p><strong>Analysis 3: Cash App</strong></p>
+        <p>
+            <a src="https://cashapp.com">Cash App</a> is currently the #1 money transfer app on the market. One of the main reasons for its success is because it provides a very 
+            straightforward approach for transferring cash peer-to-peer without having to create an account. Users can simply link their phone number/email address and people 
+            can find them through that information. Users can also find other users by their ID as well.
+            <br></br>
+            Upon opening the app, the homepage immediately directs you to the payment screen with several icons on the bottom that allow the user to switch to another 
+            feature conveniently. For the payment screen, the input number is very large, so it is obvious for the user to understand the function of the screen. The user 
+            can also choose to either request or pay others the amount they inputted. There are two icons on the top: a scanner for QR code transactions and 
+            profile/settings. The bottom nav bar icons feature: my cash (how much cash you currently have), cash card (which card you are using), payment/request, 
+            stock news, and activity (history of past transactions). The home screen nav bar allows users to visibly see where they are in the app and allows them 
+            to always be able to exit out of the screen they are on at any given time. Overall, although Cash App does not support any of the social features, the 
+            app is successful in creating a minimalistic and flexible layout with an easy navigation system for first-time users.
+        </p>
+        <img src="images/CaseStudies/Venmo/VenmoComp3.png" class="responsive image-border" style="width:50%">
+    </div>
+
+    <div class="container">
+        <h3>4. Sketching</h3>
+        <!-- Slideshow container -->
+        <div class="slideshow-container responsive" style="width:50%">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides1">
+                <img src="images/CaseStudies/Venmo/VenmoSketch3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="images/CaseStudies/Venmo/VenmoSketch1-1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="images/CaseStudies/Venmo/VenmoSketch1-2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="images/CaseStudies/Venmo/VenmoSketch2-1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="images/CaseStudies/Venmo/VenmoSketch2-2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="images/CaseStudies/Venmo/VenmoSketch4.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>5. Redesign 1</h3>
+        <p>
+            ​For redesign 1, we made minor, but important redesign changes to the top navigation bar or tab system. We condensed the original navigation bar by combining the 
+            “me, friends, and public” activity tabs into a single tab called “activity”, and including a tab for pay/requesting. The reasoning behind this change is because 
+            users were having trouble locating the pay/request button on the original. The pay/request button was next to the tab system solely dedicated to user activity. 
+            We wanted the pay/request function to have equal spotlight with the activity feed. In addition, we changed the iconography of the navigation bar for less 
+            confusion of what icons mean. In the activity tab, to account for “me, friends, and public” activities, we implemented a filter system, but only for “me” and 
+            “friends”. We took out the public activity feed because users felt it was completely unnecessary since they don’t care about strangers’ activity. In addition 
+            to the top navigation bar, we made some placement changes with the profile and the notifications. We placed the profile section at the top for easier access 
+            than within the sidebar. The profile section includes the user’s profile, as well as, preference settings. We then put the notifications in the sidebar. The 
+            last minor change was made in the pay/request page having the public/private option for payment activity be a more identifiable button. In the original, the 
+            option was on the bottom corner and not indicated as a button. Overall, the design was meant to make navigation more streamline, intuitive, and easily understood.
+        </p>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container responsive" style="width:50%">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1MeActivityList.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1FriendsActivityList.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1PayRequest.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1PrivatePostSwitch.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1MeActivitySwitch.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1Profile.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides2">
+                <img src="images/CaseStudies/Venmo/A1NavbarMeActivityList.PNG" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot2" onclick="currentSlide2(1)"></span>
+                <span class="dot2" onclick="currentSlide2(2)"></span>
+                <span class="dot2" onclick="currentSlide2(3)"></span>
+                <span class="dot2" onclick="currentSlide2(4)"></span>
+                <span class="dot2" onclick="currentSlide2(5)"></span>
+                <span class="dot2" onclick="currentSlide2(6)"></span>
+                <span class="dot2" onclick="currentSlide2(7)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>6. Redesign 2</h3>
+        <p>
+            For our second redesign, we decided to reinvent the home page entirely while making it clearly identifiable as Venmo. We took some guidance and inspiration from other 
+            competing apps such as Cash App and PayPal as well as our own redesign sketches to make a high fidelity prototype. We made the homepage have a nav bar on the bottom 
+            with 3 primary functions including “Friends”, “Transfer”, and “Settings.” We decided that having the nav bar at the bottom would make it easier for users to reach 
+            what they are trying to do. We made the iconography easy to understand and labeled it underneath for safe measures. The users profile would also be viewable at the 
+            top half of the page and the primary function of paying and requesting would be easily viewable.
+            <br></br>
+            The friends page takes you to the “friends” activity tab just like it would do in the original Venmo. Users would also have the option of looking for a specific 
+            friends activity with a drop down menu on the top. Our reasoning for making the activities list separated into the left and right is to help indicate what the user 
+            paid and what the user requested. We also made sure to include the reactions and comments and add more than just the “heart” reaction so that users can express 
+            themselves more accurately.
+            <br></br>
+            The “pay/request” page is reminiscent of the original Venmo but with a few changes. We decided to add a slider to indicate if you were paying or requesting. The 
+            “search” function and “what’s it for” section are the same, but the number pad is a little more well integrated into the page. The amount you are transferring is 
+            also enlarged in the middle so that users don’t accidently write down the wrong amount.
+            <br></br>
+            The “settings” tab has everything the settings would have in the original Venmo. The hamburger indicator on the top left of each page is also apparent for extra 
+            information. The “notification” indicator is also there at all times so that users would know that someone has requested money from them or added them as a friend.
+            <br></br>
+            ​Overall, we thought that by making the primary functions easily accessible at the bottom of the page would greatly improve the efficiency of many users. We thought 
+            about the user flow and made sure that everything is logically placed and well understood so that users are less prone to errors.
+        </p>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container responsive" style="width:50%">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1Transfer.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1FriendsActivityList.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1Pay.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1Request.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1FriendsList.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1NavbarTransfer.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1Settings.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides3">
+                <img src="images/CaseStudies/Venmo/B1Notifications.PNG" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot3" onclick="currentSlide3(1)"></span>
+                <span class="dot3" onclick="currentSlide3(2)"></span>
+                <span class="dot3" onclick="currentSlide3(3)"></span>
+                <span class="dot3" onclick="currentSlide3(4)"></span>
+                <span class="dot3" onclick="currentSlide3(5)"></span>
+                <span class="dot3" onclick="currentSlide3(6)"></span>
+                <span class="dot3" onclick="currentSlide3(7)"></span>
+                <span class="dot3" onclick="currentSlide3(8)"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Script for slideshow gallery 1-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides1");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <!-- Script for slideshow gallery 2-->
+    <script>
+        var slideIndex2 = 1;
+        showSlides2(slideIndex2);
+
+        // Next/previous controls
+        function plusSlides2(n) {
+            showSlides2(slideIndex2 += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide2(n) {
+            showSlides2(slideIndex2 = n);
+        }
+
+        function showSlides2(n) {
+            var i2;
+            var slides2 = document.getElementsByClassName("mySlides2");
+            var dots2 = document.getElementsByClassName("dot2");
+            if (n > slides2.length) { slideIndex2 = 1 }
+            if (n < 1) { slideIndex2 = slides2.length }
+            for (i2 = 0; i2 < slides2.length; i2++) {
+                slides2[i2].style.display = "none";
+            }
+            for (i2 = 0; i2 < dots2.length; i2++) {
+                dots2[i2].className = dots2[i2].className.replace(" active", "");
+            }
+            slides2[slideIndex2 - 1].style.display = "block";
+            dots2[slideIndex2 - 1].className += " active";
+        }
+    </script>
+
+    <!-- Script for slideshow gallery 3-->
+    <script>
+        var slideIndex3 = 1;
+        showSlides3(slideIndex3);
+
+        // Next/previous controls
+        function plusSlides3(n) {
+            showSlides3(slideIndex3 += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide3(n) {
+            showSlides3(slideIndex3 = n);
+        }
+
+        function showSlides3(n) {
+            var i3;
+            var slides3 = document.getElementsByClassName("mySlides3");
+            var dots3 = document.getElementsByClassName("dot3");
+            if (n > slides3.length) { slideIndex3 = 1 }
+            if (n < 1) { slideIndex3 = slides3.length }
+            for (i3 = 0; i3 < slides3.length; i3++) {
+                slides3[i3].style.display = "none";
+            }
+            for (i3 = 0; i3 < dots3.length; i3++) {
+                dots3[i3].className = dots3[i3].className.replace(" active", "");
+            }
+            slides3[slideIndex3 - 1].style.display = "block";
+            dots3[slideIndex3 - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
