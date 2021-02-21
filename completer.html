@@ -1,65 +1,327 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Completer Mobile Web App</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <head>
+    <title>Remedy Mobile Web App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Needed for navbar -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <body>
+    <nav
+      class="navbar nav-pills sticky-top navbar-expand-md navbar-light bg-light"
+    >
+      <div class="container-fluid">
+        <img class="navbar-brand" src="images/logo.svg" width="50px" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-                <div class="container">
-                  <a class="navbar-brand js-scroll-trigger" href="#">Lawrence Ngo</a>
-                  <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                      <li class="active nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Home</a>
-                      </li>
-                      <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">About</a>
-                      </li>
-                      <li class="dropdown nav-item mx-0 mx-lg-1">
-                        <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="dropdown" href="#">Case Studies</a>
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Triton News Website</a></li>
-                          <li><a href="#">Venmo</a></li>
-                          <li><a href="#">Amtrak</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown nav-item mx-0 mx-lg-1">
-                        <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="dropdown" href="#">Projects</a>
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Remedy Mobile Web App</a></li>
-                          <li><a href="#">Completer Mobile Web App</a></li>
-                          <li><a href="#">Global Ties: Mundo Gardens</a></li>
-                          <li><a href="#">Wooden Desk</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Resume</a>
-                      </li>
-                      <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-</body>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Case Studies
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="tritonNews.html"
+                    >Triton News Website</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="venmo.html">Venmo</a></li>
+                <li><a class="dropdown-item" href="amtrak.html">Amtrak</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                aria-current="page"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a
+                    class="dropdown-item active"
+                    aria-current="page"
+                    href="remedy.html"
+                    >Remedy Mobile Web App</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="completer.html"
+                    >Completer Mobile Web App</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mundoGardens.html"
+                    >Global Ties: Mundo Gardens</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="woodenDesk.html"
+                    >Custom Wooden Desk</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="resume.html">Resume</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container container-first">
+      <h2>Completer Mobile Web App</h2>
+      <img src="images/Projects/Completer/CompleterSlide.png" class="responsive image-border" style="width: 80%">
+    </div>
+
+    <div class="container">
+      <h3>1. Needfinding</h3>
+      <p>
+        We were told to take time to observe students and the fields of
+        learning. Some issues that we observed were with the navigation of
+        UCSDs’ class portals, and how packed a library or coffee shop. We also
+        looked into the issue of procrastination and motivation, which led us to
+        create COMPLETER to nullify those issues, keeping the user accountable
+        in completing their tasks.
+      </p>
+    </div>
+
+    <div class="container">
+      <h3>2. Storyboarding</h3>
+      <p>
+        To understand how our app would be used, we created a storyboard showing the app’s ability to notify the user to fulfill their task and rewards them for completing them.
+      </p>
+      <img src="images/Projects/Completer/CompleterStoryboard.jpg" class="responsive image-border" style="width: 50%">
+    </div>
+
+    <div class="container">
+      <h3>3. Paper Prototype</h3>
+      <p>
+        Before making the actual app, we made a paper prototype to see the basic visual design and user flow of the app. We then created a video of the paper prototype in a user 
+        ase scenario to make sure our app fulfills its intended purpose.​
+      </p>
+      <img src="images/Projects/Completer/CompleterWorkflow.jpg" class="responsive image-border" style="width:80%">
+      <img src="https://youtu.be/Xj1pPBSu_7s" class="responsive image-border" style=width:80%>
+    </div>
+
+    <div class="container">
+      <h3>4. Heuristic Evaluations</h3>
+      <p>
+        To improve our paper prototype design, we conducted heuristic evaluations on three users with the use of <a src="https://www.nngroup.com/articles/ten-usability-heuristics/">
+        Jakob Nielsen's 10 Heuristics</a>. We recorded their thoughts as they traversed through the whole prototype, and organized them into a 
+        <a src="https://drive.google.com/file/d/1awGh5xF67jKJz8mWwsJ9b5faWlftFPgM/view?usp=sharing">​​document</a>.​
+      </p>
+    </div>
+
+    <div class="container">
+      <h3>5. Wireframing</h3>
+      <p>
+        To see how the app will realistically look like and function, we used Adobe XD to create a digital interactive prototype.
+      </p>
+      <div class="row">
+        <div class="col-md-6 no-pad-right">
+          <img src="images/Projects/Completer/CompleterWireframeHome.png" class="responsive image-border" style="width:50%">
+        </div>
+        <div class="col-md-6 no-pad-left">
+          <img src="images/Projects/Completer/CompleterWireframeEntry.png" class="responsive image-border" style="width:50%">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>6. App development</h3>
+      <p>
+        Afterwards, we went into developing the app. We used HTML, CSS, and Javascript for development, uploaded to Github for version control, and deployed to Heroku for viewing.
+      </p>
+    </div>
+
+    <div class="container">
+      <h3>7. User Testing</h3>
+      <p>
+        To improve our app’s design, we conducted user testing on 3 UCSD students. We had them traverse the app completing 3 tasks while speaking their thoughts. At the end, we 
+        debriefed them with some questions. Throughout the whole testing, we recorded their thoughts and actions to see what we could change.
+      </p>
+      <p><strong>User Tasks:</strong></p>
+        Scenario: You are going on vacation to Los Angeles from San Diego on November 15th. Your hotel check in time is after 2 pm on that day.
+        <ol>
+            <li>Create a routine</li>
+            <li>Complete a day of a routine</li>
+            <li>Finish and view a routine</li>
+            <li>Explore the rest of the app</li>
+        </ol>
+        <p><strong>​Debrief Questions:</strong></p>
+        <ul>
+            <li>“Did you understand what the app is about?”</li>
+            <li>“Was there any confusion that you had while interacting with the app?”</li>
+            <li>“What did you find about the aesthetics of the app? Anything to change or keep?”</li>
+            <li>“Any features that you wish to change or add?"</li>
+        </ul>
+    </div>
+
+    <div class="container">
+      <h3>8. A/B Testing</h3>
+      <p>
+        One aspect that was noticed through user testing, was the design of the “Create Routine” screen. We conducted some A/B testing to see whether an additional screen was necessary 
+        for the “Set Alarm” function. We determined that an additional screen was not needed and the “Set Alarm” function could be put within the screen.
+      </p>
+      <img src="images/Projects/Completer/CompleterA_BTest.png" class="responsive image-border" style="width:80%">
+    </div>
+
+    <div class="container">
+      <h3>9. Final Prototype</h3>
+      <p>
+        After implementing our results from the A/B test, we finalized the app, introducing a green color scheme and fixing a few errors.
+      </p>
+      <!-- Slideshow container -->
+      <div class="slideshow-container responsive" style="width:25%">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides1">
+            <img src="images/Projects/Completer/CompleterHome.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+            <img src="images/Projects/Completer/CompleterCreate.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+            <img src="images/Projects/Completer/CompleterCurrentRoutines.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="images/Projects/Completer/ComepleterCurrentRoutine.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides1">
+            <img src="images/Projects/Completer/CompleterArchivedRoutines.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="images/Projects/Completer/CompleterArchivedRoutine.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides1">
+          <img src="images/Projects/Completer/CompleterCommunityFeed.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="images/Projects/Completer/CompleterProfile.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="images/Projects/Completer/CompleterHelp.png" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for slideshow gallery 1-->
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+          showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+          showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides1");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
 </html>
