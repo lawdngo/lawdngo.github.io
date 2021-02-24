@@ -10,7 +10,9 @@ body {
 
 .nav-pills .nav-link.active
 {
-  background-color:darkgray;
+  background-color:#f8f9fa;
+  border:solid;
+  border-width:1px;
   border-radius: 5px;
 
 }
