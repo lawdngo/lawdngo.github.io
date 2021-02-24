@@ -33,6 +33,29 @@ body {
   border-left: .3em solid transparent;
 }
 
+.dropdown-item.active
+{
+  padding:.25rem .5rem;
+}
+
+.dropdown-item.active, .dropdown-item:active
+{
+  background-color: #f8f9fa;
+  color:black;
+  border:solid;
+  border-radius: 5px;
+  border-width:1px;
+  
+}
+
+.navbar-nav .dropdown-menu
+{
+  position:static;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom:10px;
+}
+
 .navbar-brand
 {
   padding-top: 0;
