@@ -33,6 +33,16 @@ body {
   border-left: .3em solid transparent;
 }
 
+.dropdown-item
+{
+  white-space:normal;
+}
+
+.drop-no-wrap
+{
+  white-space:nowrap;
+}
+
 .dropdown-item.active
 {
   padding:.25rem .5rem;
