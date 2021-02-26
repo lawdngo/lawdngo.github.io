@@ -8,6 +8,11 @@ body {
   background-size: cover;
 }
 
+p
+{
+  margin-bottom: 0px;
+}
+
 .nav-pills .nav-link.active
 {
   background-color:#f8f9fa;
@@ -109,7 +114,7 @@ body {
 
 .container-first
 {
-  margin-top:50px;
+  margin-top:40px;
 }
 
 /*For container width when screen size reaches below 576px*/
@@ -374,4 +379,11 @@ h2
   {
     width:80%;
   }
+}
+
+.view-button
+{
+  background-color: black;
+  color:white;
+  padding:10px;
 }
