@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image:url("images/background/background1.jpg");
+  background-image:url("images/background/background1v2.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -13,9 +13,14 @@ p
   margin-bottom: 0px;
 }
 
+.bg-white
+{
+  background-color: #ffffff;
+}
+
 .nav-pills .nav-link.active
 {
-  background-color:#f8f9fa;
+  background-color:#ffffff;
   border:solid;
   border-width:1px;
   border-radius: 5px;
@@ -41,6 +46,14 @@ p
 .dropdown-item
 {
   white-space:normal;
+  color: rgba(0,0,0,.55);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.dropdown-item:hover
+{
+  background-color: #ffffff;
+  color:black;
 }
 
 .drop-no-wrap
@@ -55,7 +68,7 @@ p
 
 .dropdown-item.active, .dropdown-item:active
 {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   color:black;
   border:solid;
   border-radius: 5px;
@@ -69,6 +82,12 @@ p
   padding-right: 5px;
   padding-left: 5px;
   margin-bottom:10px;
+}
+
+/* Color of nav-link texts when hovering over */
+.navbar-light .navbar-nav .nav-link:hover
+{
+  color:black;
 }
 
 .navbar-brand
