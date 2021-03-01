@@ -406,3 +406,14 @@ h2
   color:white;
   padding:10px;
 }
+#scrollToTop
+{
+  display:none;
+  position:fixed;
+  right:30px;
+  bottom:30px;
+  z-index:99;
+  border-width:1px;
+  border-radius:5px;
+
+}
