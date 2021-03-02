@@ -415,5 +415,14 @@ h2
   z-index:99;
   border-width:1px;
   border-radius:5px;
+  font-size:48px;
+  background-color:rgba(255, 255, 255, 0.55);
+  color: rgba(0,0,0,.55);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
 
+#scrollToTop:hover
+{
+  background-color: #ffffff;
+  color: black;
 }
