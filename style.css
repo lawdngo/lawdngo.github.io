@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image:url("images/background/background1v2.jpg");
+  background-image:url("images/background/background3.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -84,7 +84,13 @@ p
   margin-bottom:10px;
 }
 
-/* Color of nav-link texts when hovering over */
+@media (min-width: 768px) {
+	.navbar .nav-item .dropdown-menu{ display: none; margin-top:0;  }
+	.navbar .nav-item:hover .nav-link{ color: black;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+}
+
+ /* Color of nav-link texts when hovering over */
 .navbar-light .navbar-nav .nav-link:hover
 {
   color:black;
@@ -419,14 +425,14 @@ h2
   border-radius:5px;*/
   font-size:48px;
   background-color:/*#ffffff*/ none;
-  color: rgba(0,0,0,.55);
+  color: rgba(255,255,255,.55);
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
 #scrollToTop:hover
 {
   background-color: /*#ffffff*/ none;
-  color: black;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -443,3 +449,4 @@ h2
     font-size:65px;
   }
 }
+
