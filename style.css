@@ -195,6 +195,7 @@ h2
 {
   border:solid;
   border-width:1px;
+  border-radius:5px;
 }
 
 
@@ -205,6 +206,7 @@ h2
   margin: auto;
   border:solid;
   border-width:1px;
+  border-radius:5px;
   width:100%;
   height:auto;
   display: block;
