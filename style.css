@@ -425,14 +425,14 @@ h2
   border-radius:5px;*/
   font-size:48px;
   background-color:/*#ffffff*/ none;
-  color: rgba(255,255,255,.55);
+  color: rgba(0,0,0,.55);
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
 #scrollToTop:hover
 {
   background-color: /*#ffffff*/ none;
-  color: white;
+  color: black;
 }
 
 @media (min-width: 768px) {
