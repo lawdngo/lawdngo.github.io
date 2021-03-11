@@ -13,11 +13,6 @@ p
   margin-bottom: 0px;
 }
 
-.bg-white
-{
-  background-color: #ffffff;
-}
-
 .nav-pills .nav-link.active
 {
   background-color:#ffffff;
@@ -106,6 +101,7 @@ p
 {
   padding-top: .25rem;
   padding-bottom: .25rem;
+  border-bottom:1px solid black;
 }
 
 .responsive
