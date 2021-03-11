@@ -102,6 +102,7 @@ p
   padding-top: .25rem;
   padding-bottom: .25rem;
   border-bottom:1px solid black;
+  border-radius:0px 0px 5px 5px;
 }
 
 .responsive
