@@ -246,7 +246,7 @@ h2
 
 /* On hover, add a grey background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: grey;
+  background-color: rgba(0,0,0,.60);
   color: white;
 }
 
