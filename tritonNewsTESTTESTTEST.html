@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triton News Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Needed for navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar nav-pills sticky-top navbar-expand-md navbar-light bg-white">
+    <div class="container-fluid">
+      <a href="index.html"><img class="navbar-brand" src="images/logo.svg" alt="Logo" width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav ">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><strong>About</strong></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <strong>Case Studies</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item active drop-no-wrap" aria-current="page" href="tritonNews.html"><strong>Triton News Website</strong></a></li>
+              <li><a class="dropdown-item" href="venmo.html"><strong>Venmo</strong></a></li>
+              <li><a class="dropdown-item" href="amtrak.html"><strong>Amtrak</strong></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <strong>Projects</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="remedy.html"><strong>Remedy Mobile Web App</strong></a></li>
+              <li><a class="dropdown-item" href="completer.html"><strong>Completer Mobile Web App</strong></a></li>
+              <li><a class="dropdown-item" href="mundoGardens.html"><strong>Global Ties: Mundo Gardens</strong></a></li>
+              <li><a class="dropdown-item" href="woodenDesk.html"><strong>Custom Wooden Desk</strong></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html"><strong>Resume</strong></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container-respon" id="slide1-1" style="width:80%">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides1">
+        <img src="images/CaseStudies/TritonNews/TNNSurvey1.png" alt="Pie chart showing majority student to non-student participation" style="width:100%">
+      </div>
+
+      <div class="mySlides1">
+        <img src="images/CaseStudies/TritonNews/TNNSurvey2.png" alt="Pie chart showing that majority use the phone as source of news" style="width:100%">
+      </div>
+
+      <div class="mySlides1">
+        <img src="images/CaseStudies/TritonNews/TNNSurvey3.png" alt="Bar graph showing that majority look for political, science, and/or funny news" style="width:100%">
+      </div>
+
+      <div class="mySlides1">
+        <img src="images/CaseStudies/TritonNews/TNNSurvey4.png" alt="Pie chart showing that majority first see the image and title of an article" style="width:100%">
+      </div>
+
+      <div class="mySlides1">
+        <img src="images/CaseStudies/TritonNews/TNNSurvey5.png" alt="Pie chart showing general view time being between 30s and 1 min" style="width:100%">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Slideshow container -->
+    <div class="slideshow-container-respon" id="slide1-2" style="width:80%">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides2">
+        <img src="images/CaseStudies/TritonNews/TNNWireframeHomepage.png" alt="Homepage redesign wireframe" style="width:100%">
+      </div>
+
+      <div class="mySlides2">
+        <img src="images/CaseStudies/TritonNews/TNNWireframeArticleList.png" alt="Article list redesign wireframe" style="width:100%">
+      </div>
+
+      <div class="mySlides2">
+        <img src="images/CaseStudies/TritonNews/TNNWireframeArticle.png" alt="Article redesign wireframe" style="width:100%">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+    
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot2" onclick="currentSlide2(1)"></span>
+        <span class="dot2" onclick="currentSlide2(2)"></span>
+        <span class="dot2" onclick="currentSlide2(3)"></span>
+      </div>
+    </div>
+  </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container-respon" id="slide1-3"style="width:80%">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides3">
+        <img src="images/CaseStudies/TritonNews/TNNProtoHome.png" alt="Final look of homepage redesign" style="width:100%">
+      </div>
+
+      <div class="mySlides3">
+        <img src="images/CaseStudies/TritonNews/TNNPrototypeArticleList.png" alt="Final look of article list redesign" style="width:100%">
+      </div>
+
+      <div class="mySlides3">
+        <img src="images/CaseStudies/TritonNews/TNNPrototypeArticle.png" alt="Final look of article redesign" style="width:100%">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+    
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot3" onclick="currentSlide3(1)"></span>
+        <span class="dot3" onclick="currentSlide3(2)"></span>
+        <span class="dot3" onclick="currentSlide3(3)"></span>
+      </div>
+    </div>
+  </div>
+
+<script>
+  var imageList;
+  var galleryNum;
+
+  function fillList()
+  {
+    galleryNum = 0;
+    while(galleryNum <= 5)
+    {
+      if((document.getElementsByClassName("mySlides" + galleryNum)) != null)
+      {
+        galleryNum++;
+      }
+      else
+      {
+        break;
+      }
+    }
+
+    imageList = new Array[galleryNum];
+
+    for(var x = 0; x < galleryNum; x++)
+    {
+      imageList[x] = new Array[document.getElementsByClassName("mySlides" + x).length]
+      for(var y = 0; y < imageList[x].length; y++)
+      {
+        imageList[x][y] = document.getElementsByClassName("mySlides" + x)[y];
+      }
+    }
+  }
+
+  function showSlides()
+
+  
+
+
+</script>
+
+
+<!-- Script for slideshow gallery 1-3 
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides1");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>-->
+
+</body>
+</html>
