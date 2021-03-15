@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
   <!-- Needed for navbar -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -178,15 +179,15 @@
         </div>
 
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(0,-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(0,1)">&#10095;</a>
 
         <!-- The dots/circles -->
         <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dotty dot1" onclick="currentSlide(0,1)"></span>
+            <span class="dotty dot1" onclick="currentSlide(0,2)"></span>
+            <span class="dotty dot1" onclick="currentSlide(0,3)"></span>
+            <span class="dotty dot1" onclick="currentSlide(0,4)"></span>
         </div>
       </div>
 
@@ -266,35 +267,107 @@
         <img src="images/Projects/WoodenDesk/WoodenFinal.JPG" alt="Mentor and I showcasing the finished wooden desk" class="responsive image-border" style="width:80%">
     </div>
 
-    <!-- Script for slideshow gallery 1-->
+    <a onclick="topJump()" id="scrollToTop"><i class="fa fa-angle-double-up"></i></a>
+
+  <script>
+    //Get the button:
+    mybutton = document.getElementById("scrollToTop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollShow()};
+
+    function scrollShow() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        
+        $("#scrollToTop").fadeIn();
+        mybutton.style.display = "block";
+      } else {
+        $("#scrollToTop").fadeOut();
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topJump() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+  </script>
+
     <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next/previous controls
-      function plusSlides(n) {
-          showSlides(slideIndex += n);
+      var imageList, imageIndex;
+      var galleryNum;
+      var dotList, dotIndex;
+      fillList();
+      initialShow();
+    
+      //Function that shows first slide of all slideshows
+      function initialShow()
+      {
+        for(var x = 0; x < galleryNum; x++)
+        {
+          showSlides(x,1);
+        }
       }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-          showSlides(slideIndex = n);
+  
+      //Function that creates and fills nested arrays for indexing and image storage
+      function fillList()
+      {
+        galleryNum = 1;
+        while(galleryNum <= 5)
+        {
+          if((document.getElementsByClassName("mySlides" + galleryNum).length) !== 0)
+          {
+            galleryNum++;
+          }
+          else
+          {
+            galleryNum--;
+            break;
+          }
+        }
+        imageList = new Array(galleryNum);
+        imageIndex = new Array(galleryNum);
+        dotList = new Array(galleryNum);
+    
+        for(var x = 0; x < galleryNum; x++)
+        {
+          imageIndex[x] = 1;
+          imageList[x] = new Array(document.getElementsByClassName("mySlides" + (x+1)).length);
+          dotList[x] = new Array(document.getElementsByClassName("dot" + (x+1)).length);
+    
+          for(var y = 0; y < imageList[x].length; y++)
+          {
+            imageList[x][y] = document.getElementsByClassName("mySlides" + (x+1))[y];
+            dotList[x][y] = document.getElementsByClassName("dot" + (x+1))[y];
+          }
+        }
       }
-
-      function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides1");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) { slideIndex = 1 }
-          if (n < 1) { slideIndex = slides.length }
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
+      //Function for moving to next or previous slide
+      function plusSlides(q, n)
+      {
+        showSlides(q, imageIndex[q]+=n)
+      }
+    
+      //Function used for clicking on specific slide.
+      function currentSlide(q,n)
+      {
+        showSlides(q, imageIndex[q] = n)
+      }  
+    
+      //Function that shows slides
+      function showSlides(q,n)
+      {
+        if (n > imageList[q].length) {imageIndex[q] = 1}
+        if (n < 1) {imageIndex[q] = imageList[q].length}
+        for (var i = 0; i < imageList[q].length; i++) {
+          imageList[q][i].style.display = "none";
+        }
+        for (var i = 0; i < dotList[q].length; i++) {
+          dotList[q][i].className = dotList[q][i].className.replace(" active", "");
+        }
+        imageList[q][imageIndex[q]-1].style.display = "block";
+        dotList[q][imageIndex[q]-1].className += " active";
       }
     </script>
   </body>

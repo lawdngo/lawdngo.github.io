@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <!-- Needed for navbar -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -153,11 +152,11 @@
     
       <!-- The dots/circles -->
       <div style="text-align:center">
-        <span class="dotty dot1" onclick="currentSlide(0,1)"></span>
-        <span class="dotty dot1" onclick="currentSlide(0,2)"></span>
-        <span class="dotty dot1" onclick="currentSlide(0,3)"></span>
-        <span class="dotty dot1" onclick="currentSlide(0,4)"></span>
-        <span class="dotty dot1" onclick="currentSlide(0,5)"></span>
+        <span class="dot1" onclick="currentSlide(0,1)"></span>
+        <span class="dot1" onclick="currentSlide(0,2)"></span>
+        <span class="dot1" onclick="currentSlide(0,3)"></span>
+        <span class="dot1" onclick="currentSlide(0,4)"></span>
+        <span class="dot1" onclick="currentSlide(0,5)"></span>
       </div>
     </div>
   </div>
@@ -253,9 +252,9 @@
     
       <!-- The dots/circles -->
       <div style="text-align:center">
-        <span class="dotty dot2" onclick="currentSlide(1,1)"></span>
-        <span class="dotty dot2" onclick="currentSlide(1,2)"></span>
-        <span class="dotty dot2" onclick="currentSlide(1,3)"></span>
+        <span class="dot2" onclick="currentSlide(1,1)"></span>
+        <span class="dot2" onclick="currentSlide(1,2)"></span>
+        <span class="dot2" onclick="currentSlide(1,3)"></span>
       </div>
     </div>
   </div>
@@ -289,9 +288,9 @@
     
       <!-- The dots/circles -->
       <div style="text-align:center">
-        <span class="dotty dot3" onclick="currentSlide(2,1)"></span>
-        <span class="dotty dot3" onclick="currentSlide(2,2)"></span>
-        <span class="dotty dot3" onclick="currentSlide(2,3)"></span>
+        <span class="dot3" onclick="currentSlide(2,1)"></span>
+        <span class="dot3" onclick="currentSlide(2,2)"></span>
+        <span class="dot3" onclick="currentSlide(2,3)"></span>
       </div>
     </div>
   </div>
@@ -322,82 +321,121 @@
     }
 
   </script>
-  
-  <script>
-    var imageList, imageIndex;
-    var galleryNum;
-    var dotList, dotIndex;
-    fillList();
-    initialShow();
-  
-    //Function that shows first slide of all slideshows
-    function initialShow()
+
+<script>
+  var imageList;
+  var imageIndex;
+  var galleryNum;
+  var dotList;
+  var dotIndex;
+  fillList();
+  console.log("did filllist()");
+  console.log('imageList' + imageList);
+  initialShow();
+
+  function initialShow()
+  {
+    for(var x = 0; x < galleryNum; x++)
     {
-      for(var x = 0; x < galleryNum; x++)
+      showSlides(x,1);
+    }
+  }
+  function fillList()
+  {
+    galleryNum = 1;
+    while(galleryNum <= 5)
+    {
+      if((document.getElementsByClassName("mySlides" + galleryNum).length) !== 0)
       {
-        showSlides(x,1);
+        console.log(document.getElementsByClassName("mySlides" + galleryNum));
+        galleryNum++;
+      }
+      else
+      {
+        galleryNum--;
+        console.log("galleryNum:" + galleryNum);
+        break;
       }
     }
 
-    //Function that creates and fills nested arrays for indexing and image storage
-    function fillList()
+    imageList = new Array(galleryNum);
+    imageIndex = new Array(galleryNum);
+    dotList = new Array(galleryNum);
+
+    for(var x = 0; x < galleryNum; x++)
     {
-      galleryNum = 1;
-      while(galleryNum <= 5)
+      imageIndex[x] = 1;
+      imageList[x] = new Array(document.getElementsByClassName("mySlides" + (x+1)).length);
+      dotList[x] = new Array(document.getElementsByClassName("dot" + (x+1)).length);
+
+      for(var y = 0; y < imageList[x].length; y++)
       {
-        if((document.getElementsByClassName("mySlides" + galleryNum).length) !== 0)
-        {
-          galleryNum++;
-        }
-        else
-        {
-          galleryNum--;
-          break;
-        }
-      }
-      imageList = new Array(galleryNum);
-      imageIndex = new Array(galleryNum);
-      dotList = new Array(galleryNum);
-  
-      for(var x = 0; x < galleryNum; x++)
-      {
-        imageIndex[x] = 1;
-        imageList[x] = new Array(document.getElementsByClassName("mySlides" + (x+1)).length);
-        dotList[x] = new Array(document.getElementsByClassName("dot" + (x+1)).length);
-  
-        for(var y = 0; y < imageList[x].length; y++)
-        {
-          imageList[x][y] = document.getElementsByClassName("mySlides" + (x+1))[y];
-          dotList[x][y] = document.getElementsByClassName("dot" + (x+1))[y];
-        }
+        imageList[x][y] = document.getElementsByClassName("mySlides" + (x+1))[y];
+        dotList[x][y] = document.getElementsByClassName("dot" + (x+1))[y];
+        console.log(dotList[x][y]);
       }
     }
-    //Function for moving to next or previous slide
-    function plusSlides(q, n)
-    {
-      showSlides(q, imageIndex[q]+=n)
+  }
+
+  function plusSlides(q, n)
+  {
+    showSlides(q, imageIndex[q]+=n)
+    
+  }
+
+  function currentSlide(q,n)
+  {
+    showSlides(q, imageIndex[q] = n)
+  }  
+
+  function showSlides(q,n)
+  {
+    if (n > imageList[q].length) {imageIndex[q] = 1}
+    if (n < 1) {imageIndex[q] = imageList[q].length}
+    for (var i = 0; i < imageList[q].length; i++) {
+      imageList[q][i].style.display = "none";
     }
-  
-    //Function used for clicking on specific slide.
-    function currentSlide(q,n)
-    {
-      showSlides(q, imageIndex[q] = n)
-    }  
-  
-    //Function that shows slides
-    function showSlides(q,n)
-    {
-      if (n > imageList[q].length) {imageIndex[q] = 1}
-      if (n < 1) {imageIndex[q] = imageList[q].length}
-      for (var i = 0; i < imageList[q].length; i++) {
-        imageList[q][i].style.display = "none";
-      }
-      for (var i = 0; i < dotList[q].length; i++) {
-        dotList[q][i].className = dotList[q][i].className.replace(" active", "");
-      }
-      imageList[q][imageIndex[q]-1].style.display = "block";
-      dotList[q][imageIndex[q]-1].className += " active";
+    for (var i = 0; i < dotList[q].length; i++) {
+      dotList[q][i].className = dotList[q][i].className.replace(" active", "");
     }
-  </script>
+    imageList[q][imageIndex[q]-1].style.display = "block";
+    dotList[q][imageIndex[q]-1].className += " active";
+  }
+
+</script>
+
+
+<!-- Script for slideshow gallery 1-3 
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>-->
+
 </body>
 </html>

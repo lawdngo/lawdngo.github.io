@@ -1,0 +1,148 @@
+<!-- Slideshow -->
+<div class="slideshow-container-respon" style="width:80%">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides1">
+      <img src="images/CaseStudies/TritonNews/TNNSurvey1.png" alt="Pie chart showing majority student to non-student participation" style="width:100%">
+    </div>
+
+    <div class="mySlides1">
+      <img src="images/CaseStudies/TritonNews/TNNSurvey2.png" alt="Pie chart showing that majority use the phone as source of news" style="width:100%">
+    </div>
+
+    <div class="mySlides1">
+      <img src="images/CaseStudies/TritonNews/TNNSurvey3.png" alt="Bar graph showing that majority look for political, science, and/or funny news" style="width:100%">
+    </div>
+
+    <div class="mySlides1">
+      <img src="images/CaseStudies/TritonNews/TNNSurvey4.png" alt="Pie chart showing that majority first see the image and title of an article" style="width:100%">
+    </div>
+
+    <div class="mySlides1">
+      <img src="images/CaseStudies/TritonNews/TNNSurvey5.png" alt="Pie chart showing general view time being between 30s and 1 min" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(0,-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(0,1)">&#10095;</a>
+  
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot1" onclick="currentSlide(0,1)"></span>
+      <span class="dot1" onclick="currentSlide(0,2)"></span>
+      <span class="dot1" onclick="currentSlide(0,3)"></span>
+      <span class="dot1" onclick="currentSlide(0,4)"></span>
+      <span class="dot1" onclick="currentSlide(0,5)"></span>
+    </div>
+  </div>
+
+
+  <!--Script that applies to all slideshows -->
+  <script>
+    var imageList, imageIndex;
+    var galleryNum;
+    var dotList, dotIndex;
+    fillList();
+    initialShow();
+  
+    //Function that shows first slide of all slideshows
+    function initialShow()
+    {
+      for(var x = 0; x < galleryNum; x++)
+      {
+        showSlides(x,1);
+      }
+    }
+
+    //Function that creates and fills nested arrays for indexing and image storage
+    function fillList()
+    {
+      galleryNum = 1;
+      while(galleryNum <= 5)
+      {
+        if((document.getElementsByClassName("mySlides" + galleryNum).length) !== 0)
+        {
+          galleryNum++;
+        }
+        else
+        {
+          galleryNum--;
+          break;
+        }
+      }
+      imageList = new Array(galleryNum);
+      imageIndex = new Array(galleryNum);
+      dotList = new Array(galleryNum);
+  
+      for(var x = 0; x < galleryNum; x++)
+      {
+        imageIndex[x] = 1;
+        imageList[x] = new Array(document.getElementsByClassName("mySlides" + (x+1)).length);
+        dotList[x] = new Array(document.getElementsByClassName("dot" + (x+1)).length);
+  
+        for(var y = 0; y < imageList[x].length; y++)
+        {
+          imageList[x][y] = document.getElementsByClassName("mySlides" + (x+1))[y];
+          dotList[x][y] = document.getElementsByClassName("dot" + (x+1))[y];
+        }
+      }
+    }
+    //Function for moving to next or previous slide
+    function plusSlides(q, n)
+    {
+      showSlides(q, imageIndex[q]+=n)
+    }
+  
+    //Function used for clicking on specific slide.
+    function currentSlide(q,n)
+    {
+      showSlides(q, imageIndex[q] = n)
+    }  
+  
+    //Function that shows slides
+    function showSlides(q,n)
+    {
+      if (n > imageList[q].length) {imageIndex[q] = 1}
+      if (n < 1) {imageIndex[q] = imageList[q].length}
+      for (var i = 0; i < imageList[q].length; i++) {
+        imageList[q][i].style.display = "none";
+      }
+      for (var i = 0; i < dotList[q].length; i++) {
+        dotList[q][i].className = dotList[q][i].className.replace(" active", "");
+      }
+      imageList[q][imageIndex[q]-1].style.display = "block";
+      dotList[q][imageIndex[q]-1].className += " active";
+    }
+  </script>
+
+  <!--Original script that only applies to one slideshow
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides1");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>-->
