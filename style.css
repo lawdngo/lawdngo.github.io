@@ -193,6 +193,41 @@ h3
   
 }
 
+#venmoCritique
+{
+  width:60%;
+}
+
+#venmoComp2
+{
+  width:70%;
+}
+
+#venmoComp3
+{
+  width:80%;
+}
+
+@media (max-width: 768px) {
+  #venmoCritique
+  {
+    width:90%;
+  }
+
+}
+
+@media (max-width: 992px) {
+  #venmoComp2
+  {
+    width:40%;
+  }
+
+  #venmoComp3
+  {
+    width:60%;
+  }
+}
+
 .image-border
 {
   border:solid;
@@ -349,17 +384,17 @@ h3
 
 #venmoSlideshow1
 {
-  width:40%;
+  width:30%;
 }
 
 #venmoSlideshow2
 {
-  width:30%;
+  width:70%;
 }
 
 #venmoSlideshow3
 {
-  width:30%;
+  width:70%;
 }
 
 #woodenSlideshow1
@@ -394,24 +429,30 @@ h3
     width:80%;
   }
 
-  #venmoSlideshow1
-  {
-    width:80%;
-  }
-
-  #venmoSlideshow2
-  {
-    width:80%;
-  }
   
-  #venmoSlideshow3
-  {
-    width:80%;
-  }
+
+  
+  
+  
 
   #woodenSlideshow1
   {
     width:80%;
+  }
+}
+
+@media (max-width: 992px) {
+  #venmoSlideshow1
+  {
+    width:60%;
+  }
+  #venmoSlideshow2
+  {
+    width:60%;
+  }
+  #venmoSlideshow3
+  {
+    width:60%;
   }
 }
 
